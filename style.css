@@ -1303,144 +1303,6 @@ body.vjs-full-window {
 The original source of this file lives at
 https://github.com/videojs/video.js/blob/master/src/css/video-js.less */
 /* ==========================================================================
-   Header
-   ========================================================================== */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 5vh;
-  width: 100vw;
-  overflow: hidden;
-}
-.header h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 7.5vh;
-  letter-spacing: -0.035em;
-}
-.header .float {
-  width: 2.5vw;
-  height: auto;
-}
-
-/* ==========================================================================
-   Menu
-   ========================================================================== */
-/* ==========================================================================
-   Projects
-   ========================================================================== */
-.projects {
-  width: 76%;
-  margin: 0 8% 0 16%;
-  text-align: center;
-  font-family: "Pitch Regular", monospace;
-}
-@media (max-width: 640px) {
-  .projects {
-    width: 100%;
-    margin: 0;
-  }
-}
-.projects i {
-  font-family: "Pitch Italic", monospace;
-}
-.projects h2 {
-  font-size: 0.85em;
-  text-transform: uppercase;
-}
-.projects .project {
-  position: relative;
-  width: 100%;
-  margin: 0 0 10em 0;
-}
-.projects .project .play {
-  overflow: hidden;
-  cursor: pointer;
-}
-.projects .project .play:before {
-  position: absolute;
-  content: "";
-  width: 50px;
-  height: 60px;
-  background-color: white;
-  left: 50%;
-  top: 50%;
-  z-index: 2;
-  transform: translate(-25px, -30px);
-  clip-path: polygon(100% 50%, 0 0, 0 100%);
-  -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
-}
-@media (max-width: 640px) {
-  .projects .project .play:before {
-    width: 25px;
-    height: 30px;
-    left: 5%;
-    top: auto;
-    bottom: 10%;
-    transform: none;
-  }
-}
-.projects .project .play:hover:before {
-  opacity: 0.35;
-}
-.projects .project figure {
-  margin: 0;
-}
-.projects .project--media {
-  position: relative;
-  max-width: 100%;
-}
-.projects .project--desc {
-  position: absolute;
-  width: 100%;
-  bottom: 1.5em;
-  padding-top: 1em;
-  font-size: 0.85em;
-  color: white;
-}
-@media (max-width: 640px) {
-  .projects .project--desc {
-    bottom: -7em;
-  }
-}
-.projects .project--desc ol {
-  display: inline-block;
-}
-.projects .project--information li {
-  display: inline-block;
-  padding-right: 1.5em;
-}
-@media (max-width: 640px) {
-  .projects .project--information li {
-    display: block;
-    padding: 0;
-  }
-  .projects .project--information li:before, .projects .project--information li:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
-  }
-}
-@media (max-width: 640px) {
-  .projects .project--information-director {
-    opacity: 0.8;
-  }
-}
-@media (max-width: 640px) {
-  .projects .project--information-production-company {
-    opacity: 0.6;
-  }
-}
-@media (max-width: 640px) {
-  .projects .project--information-year {
-    opacity: 0.4;
-  }
-}
-
-/* ==========================================================================
    Content
    ========================================================================== */
 main {
@@ -1514,6 +1376,11 @@ main .manifesto p.cut {
   }
 }
 @media (max-width: 1280px) {
+  main .manifesto p.cut {
+    padding: 2em;
+  }
+}
+@media (max-width: 1280px) {
   main .manifesto .desk {
     display: none;
   }
@@ -1545,44 +1412,6 @@ main .mark--plus-left {
 main .mark--plus-right {
   top: calc(50vh - 21px);
   right: 1.5em;
-}
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-footer {
-  position: fixed;
-  z-index: 9999;
-  overflow: hidden;
-  overflow-x: scroll;
-  max-width: 320px;
-  bottom: 1.5em;
-  left: calc(50% - 160px);
-  background-color: rgba(255, 255, 255, 0.03);
-  border-radius: 100px;
-  padding: 1em 2em;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  font-family: "Pitch Regular", monospace;
-}
-@media (prefers-color-scheme: dark) {
-  footer a {
-    color: #fefefe;
-  }
-}
-footer .year--control {
-  display: flex;
-  width: auto;
-}
-footer .year--control li {
-  display: inline-flex;
-  margin-right: 1em;
-}
-footer .year--control li:last-child {
-  padding-right: 1em;
-}
-footer .year--control a {
-  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
