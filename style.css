@@ -1475,20 +1475,18 @@ main .manifesto .green {
 @keyframes pulse {
   0% {
     width: 37.5vw;
-    height: 100vh;
   }
   50% {
     width: 60vw;
-    height: 100vh;
   }
   100% {
     width: 37.5vw;
-    height: 100vh;
   }
 }
 main .manifesto .shape {
+  height: 100vh;
   float: left;
-  shape-outside: circle(37.5%);
+  shape-outside: ellipse();
   -webkit-animation: pulse 10s infinite;
   -moz-animation: pulse 10s infinite;
   -o-animation: pulse 10s infinite;
@@ -1504,7 +1502,7 @@ main .manifesto .shape {
   }
 }
 main .manifesto p.cut {
-  padding-top: 15vh;
+  padding-top: 10vh;
   font-size: 0.875em;
   line-height: 3em;
 }

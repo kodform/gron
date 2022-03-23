@@ -45,14 +45,15 @@ background-color: black;
     }
     
     @keyframes pulse {
-      0% 		{ width: 37.5vw; height: 100vh; }
-      50% 	{ width: 60vw; height: 100vh; }
-      100% 	{ width: 37.5vw; height: 100vh; }
+      0% 		{ width: 37.5vw; }
+      50% 	{ width: 60vw; }
+      100% 	{ width: 37.5vw; }
     }
     
     .shape {
+      height: 100vh; 
       float: left;
-      shape-outside: circle(37.5%);
+      shape-outside: ellipse();
       @include pulse(10s);
       
       /*
@@ -66,7 +67,7 @@ background-color: black;
     }
     
     p.cut {
-      padding-top: 15vh;
+      padding-top: 10vh;
       font-size: 0.875em;
       line-height: 3em;
       
@@ -74,6 +75,10 @@ background-color: black;
         max-width: 64ch;
         padding: 15vh 2em;
         text-align: center;
+      }
+      
+      @media #{$marge} {
+        padding: 2em;
       }
     }
     
