@@ -1,0 +1,172 @@
+﻿/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+@mixin transition($transition-property, $transition-time, $method, $delay) {
+	-webkit-transition:	$transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+	-webkit-transition-delay: $delay;
+	-moz-transition-delay: $delay;
+	-ms-transition-delay: $delay;
+	-o-transition-delay: $delay;
+	transition-delay: $delay;
+}
+
+@mixin transitions($transition-property, $transition-time, $method, $transition-property2, $transition-time2, $method2) {
+	-webkit-transition:	$transition-property $transition-time $method, $transition-property2 $transition-time2 $method2;
+	-moz-transition: $transition-property $transition-time $method, $transition-property2 $transition-time2 $method2;
+	-ms-transition: $transition-property $transition-time $method, $transition-property2 $transition-time2 $method2;
+	-o-transition: $transition-property $transition-time $method, $transition-property2 $transition-time2 $method2;
+	transition: $transition-property $transition-time $method, $transition-property2 $transition-time2 $method2;
+}
+
+@mixin transitionPrefix($transition-time, $method, $delay) {
+	-webkit-transition:	-webkit-transform $transition-time $method;
+	-moz-transition: -moz-transform $transition-time $method;
+	-ms-transition: -ms-transform $transition-time $method;
+	-o-transition: -o-transform $transition-time $method;
+	transition: transform $transition-time $method;
+	-webkit-transition-delay: $delay;
+	-moz-transition-delay: $delay;
+	-ms-transition-delay: $delay;
+	-o-transition-delay: $delay;
+	transition-delay: $delay;
+}
+
+@mixin delay($delay) {
+	-webkit-transition-delay: $delay;
+	-moz-transition-delay: $delay;
+	-ms-transition-delay: $delay;
+	-o-transition-delay: $delay;
+	transition-delay: $delay;
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  -o-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin transform-origin ($origin) {
+	-webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+} 
+
+@mixin scaleX($scale) {
+	 @include transform(scaleX($scale));
+} 
+
+@mixin translate($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+// User select none
+@mixin user-select-none {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+// Flexbox
+@mixin flexbox {
+	 display: flex;
+	 display: -webkit-flex;
+	 display: -ms-flex;
+	 align-items: center;
+	 -webkit-align-items: center;
+	 -ms-align-items: center;
+   -ms-flex-align: center;
+	 justify-content: center;
+	 -webkit-justify-content: center;
+	 -ms-justify-content: center;
+}
+
+@mixin flexbox-aligntop {
+	 display: flex;
+	 display: -webkit-flex;
+	 display: -ms-flex;
+	 justify-content: center;
+	 -webkit-justify-content: center;
+	 -ms-justify-content: center;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin vertical-align-off {
+  position: relative;
+  top: 0%;
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+@mixin columns($count, $gap) {
+	-webkit-column-count: $count;
+	-moz-column-count: $count;
+	-ms-column-count: $count;
+	-o-column-count: $count;
+	column-count: $count;
+	-webkit-column-gap: $gap;
+	-moz-column-gap: $gap;
+	-ms-column-gap: $gap;
+	-o-column-gap: $gap;
+	column-gap: $gap;
+}
+
+// Pulse animation
+@mixin pulse($duration) {
+	-webkit-animation: pulse $duration infinite;
+	-moz-animation:    pulse $duration infinite;
+	-o-animation:      pulse $duration infinite;
+	animation:         pulse $duration infinite;
+}
+
+@keyframes pulse {
+  0% 		{ opacity: 1; }
+  50% 	{ opacity: 0.5; }
+  100% 	{ opacity: 1; }
+}
+
+// Spin animation
+@mixin spin($duration) {
+	-webkit-animation: spin $duration infinite;
+	-moz-animation:    spin $duration infinite;
+	-o-animation:      spin $duration infinite;
+	animation:         spin $duration infinite;
+}
+
+@keyframes spin {
+  0% 		{ transform: rotate3d(1, 1, 1, 0deg) scale(1.1); }
+  10% 	{ transform: rotate3d(1, 1, 1, 0deg); }
+  50% 	{ transform: rotate3d(0.5, 0.5, 0.5, 360deg); }
+  90% 	{ transform: rotate3d(1, 1, 1, 0deg); }
+  100% 	{ transform: rotate3d(1, 1, 1, 0deg) scale(1.1); }
+}

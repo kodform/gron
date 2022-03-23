@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+main {
+background-color: black;
+
+  section {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .tomato {
+    background-image: url('img/tomato.jpg');
+    background-size: cover;
+    background-position: top center;
+
+    .man-uh-fes-toh {
+      position: absolute;
+      bottom: 1.5em;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      
+      font-size: 0.875em;
+      color: #00FF0A;
+    }
+  }
+  
+  .manifesto {
+    display: block;
+      
+    .green {
+      color: #00FF0A;
+    }
+  
+    // Pulse animation
+    @mixin pulse($duration) {
+      -webkit-animation: pulse $duration infinite;
+      -moz-animation:    pulse $duration infinite;
+      -o-animation:      pulse $duration infinite;
+      animation:         pulse $duration infinite;
+    }
+    
+    @keyframes pulse {
+      0% 		{ width: 37.5vw; height: 100vh; }
+      50% 	{ width: 60vw; height: 100vh; }
+      100% 	{ width: 37.5vw; height: 100vh; }
+    }
+    
+    .shape {
+      float: left;
+      shape-outside: circle(37.5%);
+      @include pulse(10s);
+      
+      /*
+      clip-path: circle(37.5%);
+      background-color: white;
+      */
+          
+      @media #{$marge} {
+        display: none;
+      }
+    }
+    
+    p.cut {
+      padding-top: 15vh;
+      font-size: 0.875em;
+      line-height: 3em;
+      
+      @media #{$marge} {
+        max-width: 64ch;
+        padding: 15vh 2em;
+        text-align: center;
+      }
+    }
+    
+    .desk {
+      @media #{$marge} {
+        display: none;
+      }
+    }
+  }
+  
+  .mark {
+    
+    li {
+      position: fixed;
+      z-index: 2;
+    }
+    
+    &--target {
+      top: 1.5em;
+      left: 1.5em;
+    }
+    
+    &--ellipse {
+      top: 1.5em;
+      right: 1.5em;
+    }
+    
+    &--print {
+      bottom: 1.5em;
+      left: 1.5em;
+    }
+    
+    &--starburst {
+      bottom: 1.5em;
+      right: 1.5em;
+    }
+    
+    &--plus-left {
+      top: calc(50vh - 21px);
+      left: 1.5em;
+    }
+    
+    &--plus-right {
+      top: calc(50vh - 21px);
+      right: 1.5em;
+    }
+  }
+}

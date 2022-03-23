@@ -1,0 +1,155 @@
+﻿html,
+button,
+input,
+select,
+textarea {
+  color: black;
+  outline: none;
+}
+
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #CCC;
+  text-shadow: none;
+}
+
+::selection {
+  background: #CCC;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+	width: 100%;
+  border: 0;
+	border-top: 1px rgba(0,0,0,1) solid !important;
+	margin: 3em auto;
+  padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+figure {
+	margin: 0;
+}
+
+/* ==========================================================================
+   Defaults
+   ========================================================================== */
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*, *:focus, a:focus {
+	outline: none !important;
+}
+
+html, body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	font-family: "GRON";
+	font-weight: 400;
+	font-style: normal;
+	color: #fff;	
+}
+
+p {
+	margin: 1em auto;
+	line-height: 1.5em;
+}
+
+button,
+span {
+}
+
+button {
+	text-decoration: none;
+	
+	&:hover, &:active {
+		text-decoration: underline;
+	}
+}
+
+a {
+	color: #fff;
+	text-decoration: underline;
+	
+	&:hover, &:active, &:focus, &:visited {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0 auto 1em auto;
+}
+
+		
+ol, ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+	//width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: none; 
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+ 
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	background: rgba(252, 13, 27, 1); 
+	-webkit-box-shadow: none; 
+}
+
+::-webkit-scrollbar              { /* 1 */ }
+::-webkit-scrollbar-button       { /* 2 */ }
+::-webkit-scrollbar-track        { /* 3 */ }
+::-webkit-scrollbar-track-piece  { /* 4 */ }
+::-webkit-scrollbar-thumb        { /* 5 */ }
+::-webkit-scrollbar-corner       { /* 6 */ }
+::-webkit-resizer                { /* 7 */ }
