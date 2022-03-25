@@ -535,6 +535,7 @@ html, body {
   font-weight: 400;
   font-style: normal;
   color: #fff;
+  background: #000;
 }
 
 p {
@@ -1311,7 +1312,7 @@ main {
 main section {
   position: relative;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 main .tomato {
@@ -1345,6 +1346,17 @@ main .manifesto .green {
     width: 37.5vw;
   }
 }
+@keyframes lesser-pulse {
+  0% {
+    width: 7.5vw;
+  }
+  50% {
+    width: 25vw;
+  }
+  100% {
+    width: 7.5vw;
+  }
+}
 main .manifesto .shape {
   height: 100vh;
   float: left;
@@ -1360,7 +1372,7 @@ main .manifesto .shape {
 }
 @media (max-width: 1280px) {
   main .manifesto .shape {
-    display: none;
+    animation: none;
   }
 }
 main .manifesto p.cut {
@@ -1375,7 +1387,7 @@ main .manifesto p.cut {
     text-align: center;
   }
 }
-@media (max-width: 1280px) {
+@media (max-width: 640px) {
   main .manifesto p.cut {
     padding: 2em;
   }
